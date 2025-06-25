@@ -3,10 +3,7 @@ import { UserModel } from "@/models/User";
 import { connectDB } from "@/lib/mongoose";
 import { NextRequest, NextResponse } from "next/server";
 import { BlogModel } from "@/models/Blog";
-import path from "path";
-import { existsSync, mkdirSync } from "fs";
 import { saveFile } from "@/lib/actions";
-import { randomUUID } from "crypto";
 import { isBase64Image } from "@/lib/functions";
 
 export async function POST(req: NextRequest) {

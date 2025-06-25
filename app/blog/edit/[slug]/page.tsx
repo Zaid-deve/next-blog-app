@@ -28,7 +28,6 @@ import { useParams, useRouter } from "next/navigation";
 import { toast, Toaster } from "sonner";
 import { useAuth } from "@/hooks/useAuth";
 import { useEffect } from "react";
-import { Params } from "next/dist/server/request/params";
 
 
 const blogSchema = z.object({

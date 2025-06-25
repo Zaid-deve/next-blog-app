@@ -9,7 +9,6 @@ import { Calendar, EyeIcon, ShareIcon, StarIcon, User2 } from "lucide-react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import ReactMarkdown from "react-markdown";
-import { toast } from "sonner";
 
 export default async function BlogPage({ params }: any) {
     const slug = await params.slug;
