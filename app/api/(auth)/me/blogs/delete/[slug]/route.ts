@@ -3,9 +3,8 @@ import { connectDB } from '@/lib/mongoose';
 import { BlogModel } from '@/models/Blog';
 import { jwtVerify } from '@/lib/jwt';
 import { UserModel } from '@/models/User';
-import { Params } from 'next/dist/server/request/params';
 
-export async function DELETE(req: NextRequest, context: { params: { slug: string } }) {
+export async function DELETE(req: NextRequest, context: any) {
     try {
         const authorization = req.headers.get('Authorization');
         let authorized: boolean = false;
