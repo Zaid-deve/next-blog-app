@@ -5,13 +5,13 @@ import { jwtVerify } from '@/lib/jwt';
 import { UserModel } from '@/models/User';
 import { Params } from 'next/dist/server/request/params';
 
-export async function DELETE(req: NextRequest, { params }: Params) {
+export async function DELETE(req: NextRequest, context: { params: { slug: string } }) {
     try {
         const authorization = req.headers.get('Authorization');
         let authorized: boolean = false;
         let uid: any = null;
 
-        const slug: any = await params?.slug;
+        const slug: any = await context?.params.slug;
 
         if (!slug) {
             return NextResponse.json({ error: 'missing slug params !' }, { status: 400 })

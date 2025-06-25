@@ -30,7 +30,7 @@ export const BlogsContent = () => {
         data: { blogs: [] },
         pagination: {
             page: (params.get('page') ?? 1) as number,
-            limit: 1,
+            limit: 10,
             totalPages: 0,
             total: 0,
             basePath: '/dashboard'
