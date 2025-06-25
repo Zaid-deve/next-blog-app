@@ -31,7 +31,7 @@ import { useEffect } from "react";
 import { Params } from "next/dist/server/request/params";
 
 
-export const blogSchema = z.object({
+const blogSchema = z.object({
     title: z.string().min(5, "Title is too short"),
     excerpt: z.string().min(10, "Excerpt is too short"),
     content: z.string().min(50, "Content too short, please add sufficient content"),
